@@ -361,13 +361,13 @@ int main(int argc, char** argv) {
                     gui_top_panel(KF_FIX);
                     break;
                 case LEFT_KEY:
-                    simulator.target.bearing -= 127.0;
+                    simulator.target.bearing -= 2500.0;
                     if (simulator.target.bearing < 0) simulator.target.bearing = 360000.0;
                     if (simulator.target.bearing > 360000) simulator.target.bearing = 0;
                     gui_show_heading((float) (simulator.target.bearing / 1000));
                     break;
                 case RIGHT_KEY:
-                    simulator.target.bearing += 127.0;
+                    simulator.target.bearing += 2500.0;
                     if (simulator.target.bearing < 0) simulator.target.bearing = 360000.0;
                     if (simulator.target.bearing > 360000) simulator.target.bearing = 0;
                     gui_show_heading((float) (simulator.target.bearing / 1000));

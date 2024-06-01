@@ -158,7 +158,7 @@ CURLcode almanac_read_file(void) {
         a->toa.week = (int) week % 256;
         a->toa.sec = (double) sec;
         // GPS week rollover
-        a->toa.week += 2048;
+        a->toa.week += 2048+256;
         a->valid = 1;
         almanac_gps.valid = 1; // We have at least one valid record
     }
