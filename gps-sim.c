@@ -381,12 +381,12 @@ int main(int argc, char** argv) {
                     gui_show_vertical_speed((float) simulator.target.vertical_speed);
                     break;
                 case UPSPEED_KEY:
-                    simulator.target.speed += 1.0;
+                    simulator.target.speed += 10.0;
                     simulator.target.velocity = simulator.target.speed / 100.0;
                     gui_show_speed((float) (simulator.target.velocity * 3.6));
                     break;
                 case DOWNSPEED_KEY:
-                    simulator.target.speed -= 1.0;
+                    simulator.target.speed -= 10.0;
                     if (simulator.target.speed < 0) simulator.target.speed = 0;
                     simulator.target.velocity = simulator.target.speed / 100.0;
                     gui_show_speed((float) (simulator.target.velocity * 3.6));

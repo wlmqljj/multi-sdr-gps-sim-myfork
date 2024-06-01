@@ -2,7 +2,7 @@ HACKRFSDR ?= no
 PLUTOSDR ?= no
 
 DIALECT = -std=c11
-CFLAGS += $(DIALECT) -Og -g -W -Wall -D_GNU_SOURCE
+CFLAGS += $(DIALECT) -O3 -g -W -Wall -D_GNU_SOURCE
 LIBS = -lm -pthread -lpthread -lcurl -lz -lpanel -lncurses
 LDFLAGS =
 SDR_OBJ = sdr_iqfile.o

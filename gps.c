@@ -2385,7 +2385,7 @@ void *gps_thread_ep(void *arg) {
     ////////////////////////////////////////////////////////////
     // Read ephemeris
     ////////////////////////////////////////////////////////////
-    if (simulator->use_ftp) {
+    if (0 /*simulator->use_ftp*/) {
         time_t t = time(NULL);
         struct tm *tm = gmtime(&t);
         char* url = malloc(NAME_MAX);
@@ -2643,10 +2643,10 @@ void *gps_thread_ep(void *arg) {
             {
                 gtmp = alm->sv[sv].toa;
                 dt = subGpsTime(alm->sv[sv].toa, g0);
-                // if (dt < (-4.0 * SECONDS_IN_WEEK) || dt > (4.0 * SECONDS_IN_WEEK)) {
-                //     gui_status_wprintw(RED, "Invalid time of almanac.\n");
-                //     goto end_gps_thread;
-                // }
+                if (dt < (-4.0 * SECONDS_IN_WEEK) || dt > (4.0 * SECONDS_IN_WEEK)) {
+                    gui_status_wprintw(RED, "Invalid time of almanac.\n");
+                    goto end_gps_thread;
+                }
             }
         }
         gps2date(&gtmp, &ttmp);
