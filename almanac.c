@@ -155,7 +155,8 @@ CURLcode almanac_read_file(void) {
          * Celestrak almanac files use a modulo 256 week number in file name.
          * See https://celestrak.com/GPS/almanac/SEM/2021/
          */
-        a->toa.week = (int) week % 256;
+        // a->toa.week = (int) week % 256;
+        a->toa.week = (int) week;
         a->toa.sec = (double) sec;
         // GPS week rollover
         a->toa.week += 2048;
