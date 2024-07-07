@@ -2385,7 +2385,7 @@ void *gps_thread_ep(void *arg) {
     ////////////////////////////////////////////////////////////
     // Read ephemeris
     ////////////////////////////////////////////////////////////
-    if (simulator->use_ftp) {
+    if (0 /*simulator->use_ftp*/) {
         time_t t = time(NULL);
         struct tm *tm = gmtime(&t);
         char* url = malloc(NAME_MAX);

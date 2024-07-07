@@ -361,13 +361,13 @@ int main(int argc, char** argv) {
                     gui_top_panel(KF_FIX);
                     break;
                 case LEFT_KEY:
-                    simulator.target.bearing -= 127.0;
+                    simulator.target.bearing -= 2500.0;
                     if (simulator.target.bearing < 0) simulator.target.bearing = 360000.0;
                     if (simulator.target.bearing > 360000) simulator.target.bearing = 0;
                     gui_show_heading((float) (simulator.target.bearing / 1000));
                     break;
                 case RIGHT_KEY:
-                    simulator.target.bearing += 127.0;
+                    simulator.target.bearing += 2500.0;
                     if (simulator.target.bearing < 0) simulator.target.bearing = 360000.0;
                     if (simulator.target.bearing > 360000) simulator.target.bearing = 0;
                     gui_show_heading((float) (simulator.target.bearing / 1000));
@@ -381,12 +381,12 @@ int main(int argc, char** argv) {
                     gui_show_vertical_speed((float) simulator.target.vertical_speed);
                     break;
                 case UPSPEED_KEY:
-                    simulator.target.speed += 1.0;
+                    simulator.target.speed += 10.0;
                     simulator.target.velocity = simulator.target.speed / 100.0;
                     gui_show_speed((float) (simulator.target.velocity * 3.6));
                     break;
                 case DOWNSPEED_KEY:
-                    simulator.target.speed -= 1.0;
+                    simulator.target.speed -= 10.0;
                     if (simulator.target.speed < 0) simulator.target.speed = 0;
                     simulator.target.velocity = simulator.target.speed / 100.0;
                     gui_show_speed((float) (simulator.target.velocity * 3.6));

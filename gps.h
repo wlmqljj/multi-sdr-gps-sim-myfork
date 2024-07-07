@@ -21,8 +21,9 @@
 
 #define RINEX2_FILE_NAME "rinex2.gz"
 #define RINEX3_FILE_NAME "rinex3.gz"
-#define RINEX_FTP_URL "ftp://igs.bkg.bund.de/IGS/"
-#define RINEX2_SUBFOLDER "nrt"
+#define RINEX_FTP_URL "ftp://igs-ftp.bkg.bund.de/IGS/"
+/* #define RINEX2_SUBFOLDER "nrt" */
+#define RINEX2_SUBFOLDER "obs"
 #define RINEX3_SUBFOLDER "nrt_v3"
 #define RINEX_FTP_FILE "%s/%03i/%02i/%4s%03i%c.%02in.gz"
 
