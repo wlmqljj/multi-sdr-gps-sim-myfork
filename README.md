@@ -5,7 +5,9 @@ software-defined radio (SDR) platform. Supported at the moment are HackRF, ADLAM
 The software interacts with the user through a curses based text user interface (TUI) in terminal.
 
 Project based on work of [Takuji Ebinuma](https://github.com/osqzss/) and [IvanKor](https://github.com/IvanKor).
-
+### Generating Motion CSV
+Use https://github.com/dassencio/nmeagen  
+Then use llh2xyz.py to convert coordinate.
 ### Generating the GPS signal
 
 The user is able to assign a static location directly through the command line or sends motion data through a predefined input file.
